@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+const Doku = require('../doku.js');
+const fs = require('fs');
+
+function stopExecution() {
+    process.exit(0);
+}
+
+const args = process.argv.slice(2);
+
+if (args.length < 1) {
+    console.error("File is not not given");
+    process.exit(1);
+}
+
+const file_path = args[0];
+
+try {
+    if (fs.existsSync(file_path)) {
+        // console.log("file exists")
+        const content = fs.readFileSync(file_path, {encoding:'utf8', flag:'r'});
+        const dokument = new Doku(content, file_path, true);
+        dokument.subToEvent("doku-end", stopExecution)
+    } else {
+        console.error("Given file doesn't exist")
+    }
+} catch (err) {
+    console.error("Error while accessing file: ")
+    console.error(err);
+}

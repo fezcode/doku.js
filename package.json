@@ -4,5 +4,11 @@
   "description": "A Simple Text/Document Viewer written in JS",
   "main": "doku.js",
   "author": "fezcode <samil.bulbul@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "emoji-regex": "^10.1.0"
+  },
+  "bin": {
+    "doku": "./bin/doku"
+  }
 }
