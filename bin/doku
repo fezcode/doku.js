@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const Doku = require('../doku.js');
+const Doku = require('../@doku/doku.js');
 const fs = require('fs');
 
 function stopExecution() {
