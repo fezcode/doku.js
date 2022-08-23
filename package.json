@@ -1,14 +1,33 @@
 {
-  "name": "doku.js",
-  "version": "0.0.1",
-  "description": "A Simple Text/Document Viewer written in JS",
-  "main": "lib/doku.js",
-  "author": "fezcode <samil.bulbul@gmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "emoji-regex": "^10.1.0"
-  },
-  "bin": {
-    "doku": "./bin/doku"
-  }
+    "name": "doku.js",
+    "version": "0.0.1",
+    "description": "A Simple Text/Document Viewer written in JS",
+    "main": "lib/doku.js",
+    "author": "fezcode <samil.bulbul@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "emoji-regex": "^10.1.0"
+    },
+    "bin": {
+        "doku": "./bin/doku"
+    },
+    "files": [
+        "LICENSE",
+        "README.md",
+        "lib/doku.js",
+        "lib/termcolors.js",
+        "bin/doku"
+    ],
+    "keywords": [
+        "document",
+        "viewer",
+        "terminal",
+        "shell",
+        "documentation"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fezcode/doku,js.git"
+    },
+    "homepage": "https://github.com/fezcode/doku,js"
 }
