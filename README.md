@@ -90,6 +90,68 @@ Something like a multiline
 and then
 ```something like ```inline``` code block.
 
+> Examples are located in `examples/code-block.doxy`
+
+**Results**
+
+![Results of Table](./images/code-block.png)
+
+## Coloring
+
+There are couple of coloring commands.
+
+All coloring commands start with `c` prefix.
+
+| Command           | Effect                                            |
+|:-----------------:|---------------------------------------------------|
+| `c.reset`         | Resets all coloring effects                       |
+| `c.bright`        | Makes font color bright                           |
+| `c.dim`           | Makes font color dimmer                           |
+| `c.underscore`    | Puts underscore to text                           |
+| `c.blink`         | Makes text blink                                  |
+| `c.reverse`       | Switches back and foreground color as in selected |
+| `c.hidden`        | Makes text hidden                                 |
+| `c.fg.black`      | Makes foreground black                            |
+| `c.fg.red`        | Makes foreground red                              |
+| `c.fg.green`      | Makes foreground green                            |
+| `c.fg.yellow`     | Makes foreground yellow                           |
+| `c.fg.blue`       | Makes foreground blue                             |
+| `c.fg.magenta`    | Makes foreground magenta                          |
+| `c.fg.cyan`       | Makes foreground cyan                             |
+| `c.fg.white`      | Makes foreground white                            |
+| `c.bg.black`      | Makes background black                            |
+| `c.bg.red`        | Makes background red                              |
+| `c.bg.green`      | Makes background green                            |
+| `c.bg.yellow`     | Makes background yellow                           |
+| `c.bg.blue`       | Makes background blue                             |
+| `c.bg.magenta`    | Makes background magenta                          |
+| `c.bg.cyan`       | Makes background cyan                             |
+| `c.bg.white`      | Makes background white                            |
+| `c.header`        | Blue background + Black Foreground                |
+| `c.warning`       | Black background + Yellow Foreground              |
+
+> Examples are located in `examples/colors.doxy`
+
+**Results**
+
+![Results of Table](./images/colors.png)
+
+
+## Extra Commmands
+
+### `shrug`
+
+This command puts `¯\_(ツ⁣)_/¯` into where you put the command.
+
+### `startdate`
+
+This command puts start date time of the application into where you put the command.
+
+> Examples are located in `examples/extras.doxy`
+
+**Results**
+
+![Results of Table](./images/extras.png)
 
 ## Installation
 

@@ -1,0 +1,29 @@
+@{c.bright,       "bright", c.reset}@
+@{c.dim,          "dim", c.reset}@
+@{c.underscore,   "underscore", c.reset}@
+@{c.blink,        "blink", c.reset}@
+@{c.reverse,      "reverse", c.reset}@
+@{c.hidden,       "hidden", c.reset}@ --> hidden
+
+Foregrounds
+-----------
+@{c.fg.black,     "c.fg.black", c.reset}@ --> black
+@{c.fg.red,       "c.fg.red", c.reset}@
+@{c.fg.green,     "c.fg.green", c.reset}@
+@{c.fg.yellow,    "c.fg.yellow", c.reset}@
+@{c.fg.blue,      "c.fg.blue", c.reset}@
+@{c.fg.magenta,   "c.fg.magenta", c.reset}@
+@{c.fg.cyan,      "c.fg.cyan", c.reset}@
+@{c.fg.white,     "c.fg.white", c.reset}@
+
+Backgrounds
+-----------
+@{c.bg.black,     "c.bg.black", c.reset}@
+@{c.bg.red,       "c.bg.red", c.reset}@
+@{c.bg.green,     "c.bg.green", c.reset}@
+@{c.bg.yellow,    "c.bg.yellow", c.reset}@
+@{c.bg.magenta,   "c.bg.magenta", c.reset}@
+@{c.bg.cyan,      "c.bg.cyan", c.reset}@
+@{c.bg.white,     "c.bg.white", c.reset}@
+@{c.header,       "c.header", c.reset}@
+@{c.warning,      "c.warning", c.reset}@
