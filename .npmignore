@@ -4,3 +4,4 @@ examples
 images
 .gitignore
 History.md
+node_modules
