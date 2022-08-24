@@ -81,11 +81,11 @@ Doku can render any plain text file as it is. It will parse file on the start th
 This parsing will cause change in total number of lines like shown in below.
 
 #### Parsing on smaller displays
-Total number of liner decreased.
+Total number of liner increased.
 ![Small Display](./images/display-small.png)
 
 #### Parsing on larger displays
-Total number of liner increased.
+Total number of liner decreased.
 ![Large Display](./images/display-large.png)
 
 ### Terminal
