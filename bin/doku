@@ -21,7 +21,7 @@ try {
         // console.log("file exists")
         const content = fs.readFileSync(file_path, { encoding: 'utf8', flag: 'r' });
         const dokument = new Doku(content, file_path, true);
-        dokument.subToEvent("doku-end", stopExecution)
+        dokument.subToEvent("doku-end", stopExecution);
     } else {
         console.error("Given file doesn't exist")
     }

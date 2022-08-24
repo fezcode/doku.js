@@ -48,6 +48,35 @@ You can then run doku by simply typing `doku <filename>` on any file you want.
 If you don't want to install it globally, then you can install it in any directory you want
 then execute it via `npx doku` command.
 
+
+### Using inside another Node app
+If you want to use this library within your project simply add as dependency.
+```bash
+npm install doku.js
+```
+
+After adding as dependency you can simply `require` it.
+
+Example:
+
+``` js
+const doku = require("doku");
+
+function stopExecution() {
+    process.exit(0);
+}
+
+const header = "..."; // Header string that will be displayed at the top of application.
+const content = "..."; // String containing document.
+const isCentered = true; // Show frame at center.
+
+const dokument = new Doku(content, header, isCentered);
+dokument.subToEvent("doku-end", stopExecution);
+```
+
+## Details
+
+### Parsing
 Doku can render any plain text file as it is. It will parse file on the start then will parse again if terminal resizes.
 This parsing will cause change in total number of lines like shown in below.
 
@@ -59,6 +88,40 @@ Total number of liner decreased.
 Total number of liner increased.
 ![Large Display](./images/display-large.png)
 
+### Terminal
+
+Doku clears terminal each time it will do re-rendering. You cannot really access to your terminal since it (stdin) is in raw mode. 
+
+```js
+process.stdin.setRawMode(true);
+process.stdin.setEncoding('utf8');
+process.stdin.resume();
+```
+## Events
+
+If you included `doku` as dependency to your project, then you'll have two events.
+
+### `doku-start` event
+
+This event will be fired when construction of `doku` object is done.
+```js
+// To subscribe
+doku.subToEvent("doku-start", startHandler);
+
+// To unsubscribe
+doku.unsubToEvent("doku-start", startHandler);
+```
+
+### `doku-end` event
+
+This event will be fired when deconstruction of `doku` object is occurs.
+```js
+// To subscribe
+doku.subToEvent("doku-end", stopHandler);
+
+// To unsubscribe
+doku.unsubToEvent("doku-end", stopHandler);
+```
 
 ## Actions
 
@@ -304,6 +367,15 @@ This command puts `¯\_(ツ⁣)_/¯` into where you put the command.
 ### `startdate`
 
 This command puts start date time of the application into where you put the command.
+
+### Escaping Commands
+
+If you ever find yourself in need of escaping certain commands, like in documentation, you can use 
+```
+@{"@{escaped}@"}@
+```
+
+`"@{not escaped}@"` will not be escaped since `@{` and `}@` will be parsed. However, `@{"@{finally escaped}@"}@` will be escaped.
 
 > Examples are located in `examples/extras.doxy`
 

@@ -3,3 +3,7 @@ Shrug
 
 Start Date
 @{startdate}@
+
+@{c.header, "Escape Commands", c.reset}@
+"@{not escaped}@"
+@{"@{finally escaped}@"}@
