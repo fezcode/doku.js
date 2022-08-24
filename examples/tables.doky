@@ -1,0 +1,29 @@
+@{c.header, "TABLE EXAMPLES", c.reset}@
+
+@{c.header, "Simple Table", c.reset}@
+@{begin-table}@
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Data 1-1 | Data 1-2 | Data 1-3 | 
+| Data 3-1 | Data 3-2 | Data 3-3 |
+@{end-table}@
+
+@{c.header, "Missing Field Table", c.reset}@
+@{begin-table}@
+| Column 1 | Column 2 | Column 3 |
+|--------------------------------|
+| Data 1-1 | Data 1-2 |
+| Data 2-1 | | Data 2-3 |
+@{end-table}@
+
+
+@{c.header, "More Complex", c.reset}@
+@{begin-table}@
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Data 1-1 | Data 1-2 | Data 1-3 | 
+
+| Data 2-1 |
+// Inline comment
+| Data 3-1      | Data 3-2      | Data 3-3       |
+@{end-table}@
