@@ -5,7 +5,7 @@ Doku.js is a terminal ui text/document viewer that supports a custom documentati
 ![ASCII ART](./images/ascii-art.png)
 
 ## Features
-- Border colors. (all common terminal colors: blue, red, green, yellow, magenta, cyan, white, black)
+- Border colors. (all common terminal colors: blue, red, green, yellow, magenta, cyan, white, black, results may change depending on your terminal colors)
 - Center content.
 - Change frame position.
 - Slide text from top to bottom.
@@ -39,42 +39,58 @@ Doku.js is a terminal ui text/document viewer that supports a custom documentati
 
 ## Installation
 
+```bash
 npm install -g doku.js
+```
 
 You can then run doku by simply typing `doku <filename>` on any file you want.
 
 If you don't want to install it globally, then you can install it in any directory you want
-and execute it via `npx doku` command.
+then execute it via `npx doku` command.
 
-Doku can render any plain text file as it is. It will parse file on the start then will do it again if any resizing occurs.
+Doku can render any plain text file as it is. It will parse file on the start then will parse again if terminal resizes.
+This parsing will cause change in total number of lines like shown in below.
+
+#### Parsing on smaller displays
+Total number of liner decreased.
+![Small Display](./images/display-small.png)
+
+#### Parsing on larger displays
+Total number of liner increased.
+![Large Display](./images/display-large.png)
+
 
 ## Actions
 
-Doku has following actions while running application
+Doku has following actions while running application:
 
-| Action                   | Description                                              |
-|--------------------------|----------------------------------------------------------|
-| Next Line                | d, Down Arrow, Enter                                     |
-| Previous Line            | a, Up Arrow                                              |
-| Next Page (20 lines)     | Page Down, Right Arrow                                   |
-| Previous Page (20 lines) | Page Up, Left Arrow                                      |
-| Go To Start              | s, Home                                                  |
-| Go To End                | e, End                                                   |
-| Go To Line Number        | Print any number. Press Enter to go, q or ESC to cancel  |
-| Cycle Border Colors      | r (blue, red, green, yellow, magenta, cyan, white, black)|
-| Center Content           | c                                                        |
-| Frame Position           | l                                                        |
-| Toggle Text Slide        | t                                                        |
-| Toggle Patterns          | p                                                        |
-| Find Next                | n (Go to next occurrence of word if exists)              |
-| Find Previous            | b (Go to previous occurrence of word if exists)          |
-| Open Command Line        | :                                                        |
-| Show Help Window         | h                                                        |
-| Quit Application         | q or CTRL+C                                              |
-| Quit Help                | h                                                        |
+| Action                   | Description (all actions are case insensitive)            |
+|--------------------------|-----------------------------------------------------------|
+| Next Line                | d, Down Arrow, Enter                                      |
+| Previous Line            | a, Up Arrow                                               |
+| Next Page (20 lines)     | Page Down, Right Arrow                                    |
+| Previous Page (20 lines) | Page Up, Left Arrow                                       |
+| Go To Start              | s, Home                                                   |
+| Go To End                | e, End                                                    |
+| Go To Line Number        | Print any number. Press Enter to go, q or ESC to cancel   |
+| Cycle Border Colors      | r (blue, red, green, yellow, magenta, cyan, white, black) |
+| Center Content           | c                                                         |
+| Frame Position           | l                                                         |
+| Toggle Text Slide        | t                                                         |
+| Toggle Patterns          | p                                                         |
+| Find Next                | n (Go to next occurrence of word if exists)               |
+| Find Previous            | b (Go to previous occurrence of word if exists)           |
+| Open Command Line        | :                                                         |
+| Show Help Window         | h                                                         |
+| Quit Application         | q or CTRL+C                                               |
+| Quit Help                | h                                                         |
 
 ## App Commands
-While in normal mode (not in command line), if a number is entered as the first character, command line waits a line number to go. If given line number is valid then document will go to that line. You can always cancel command by pressing `ESC`
+While in normal mode (not in command line), if a number is entered as the first character, command line waits a line number to go. If given line number is valid then document will go to that line. You can always cancel command by pressing `ESC` or `q`.
+
+If an error occurs, then command line (alongside with status) will turn red.
+For example if user presses `k` which is not mapped, an error like shown below will be displayed. 
+![Error due to not mapped key](./images/error.png)
 
 If user types `:` then it opens a command line. There are couple of things that users can do:
 
@@ -108,6 +124,25 @@ It takes 1 argument. That argument must be positive number. It is in millisecond
 
 ### Quit Command
 Quits application.
+
+## Screenshots
+
+#### Search Command
+![Search Command](./images/search-1.png)
+
+#### Searching Next by Pressing `n`
+![Search Next](./images/search-2.png)
+
+#### Frame Left
+![Frame Left](./images/frame-left.png)
+
+#### Frame Center
+![Frame Center](./images/frame-center.png)
+
+#### Content Centered
+![Content Centered](./images/content-center.png)
+
+
 
 # doky - Custom Documentation Syntax
 
@@ -175,27 +210,27 @@ There is no left, right or center align.
 
 ## Code Block
 
-When you want to display your text in a code block, either multiline or inline, you can 3 backticks (```)
+When you want to display your text in a code block, multiline or inline, you can use 3 backticks (```)
 
-3 backticks start and end any code block.
+3 backticks start and end code blocks.
 
 ### Examples
 
 #### Inline
-Here is an ```inline``` code block.
+Here is an \`\`\`inline\`\`\` code block.
 
 #### Multiline
-```
+\`\`\`
 Here is a
 multiline
 code block.
-```
+\`\`\`
 
 #### Both
-Maybe you want to try ```
+Maybe you want to try \`\`\`
 Something like a multiline
 and then
-```something like ```inline``` code block.
+\`\`\`something like \`\`\`inline\`\`\` code block.
 
 > Examples are located in `examples/code-block.doxy`
 
