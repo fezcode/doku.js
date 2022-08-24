@@ -1,0 +1,17 @@
+@{c.header, "CODE BLOCK EXAMPLES", c.reset}@
+
+@{c.header, "Inline", c.reset}@
+Here is an ```inline``` code block.
+
+@{c.header, "Multiline", c.reset}@
+```
+Here is a
+multiline
+code block.
+```
+
+@{c.header, "Both", c.reset}@
+Maybe you want to try ```
+Something like a multiline
+and then
+```something like ```inline``` code block.

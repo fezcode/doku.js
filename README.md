@@ -2,7 +2,7 @@
 
 Doku.js is a terminal ui text/document viewer that supports a custom documentation syntax called `doky`.
 
-# doxy - Custom syntax
+# doky - Custom Documentation Syntax
 
 `doky` has custom commands that allows `doku` to change what is displayed on terminal.
 
@@ -66,6 +66,29 @@ There is no left, right or center align.
 ![Results of Table](./images/tables.png)
 
 
+## Code Block
+
+When you want to display your text in a code block, either multiline or inline, you can 3 backticks (```)
+
+3 backticks start and end any code block.
+
+### Examples
+
+#### Inline
+Here is an ```inline``` code block.
+
+#### Multiline
+```
+Here is a
+multiline
+code block.
+```
+
+#### Both
+Maybe you want to try ```
+Something like a multiline
+and then
+```something like ```inline``` code block.
 
 
 ## Installation
