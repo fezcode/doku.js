@@ -5,7 +5,7 @@ Doku.js is a terminal ui text/document viewer that supports a custom documentati
 ![ASCII ART](./images/ascii-art.png)
 
 ## Features
-- Change border colors. (all common terminal colors: blue, red, green, yellow, magenta, cyan, white, black)
+- Border colors. (all common terminal colors: blue, red, green, yellow, magenta, cyan, white, black)
 - Center content.
 - Change frame position.
 - Slide text from top to bottom.
@@ -210,7 +210,8 @@ Any command you want to have will be in between command start (`@{`) and command
 
 You can put any number of commands in between command start and end characters with comma (`,`) as the delimiter.
 
-If you want to escape any string in a command block, then simply put it in between quotes (`"text"`)
+If you want to escape any string in a command block, then simply put it in between quotes (`"text"`).
+This will make that string to be interpreted as plain text.
 
 For example:
 
