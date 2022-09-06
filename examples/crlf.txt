@@ -1,0 +1,17 @@
+@{c.fg.red, "Windows Style Line Ending", c.reset}@
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Etiam est ex, ullamcorper ut faucibus nec, hendrerit eget dolor.
+Sed a lectus sit amet erat semper bibendum et vel urna. Proin ac
+ornare ante, sit amet vehicula nibh. In aliquet volutpat interdum.
+Praesent id consequat nisl. Vestibulum bibendum sollicitudin nibh,
+placerat convallis tortor tristique et. Maecenas ac ligula id sem
+sodales elementum.
+
+Suspendisse sit amet justo bibendum turpis tristique vulputate.
+Vestibulum pharetra lectus sed condimentum dignissim. Aliquam nec
+ligula lacinia, posuere ex at, tincidunt ex. Curabitur vulputate
+eleifend malesuada. Sed nec massa tempus, aliquam sapien ut, consectetur
+tellus. Donec tellus orci, lacinia et luctus at, tincidunt non tellus.
+Nunc semper efficitur quam, sit amet aliquet sem cursus lobortis.
+Donec ac enim euismod, gravida est in, iaculis mi. Quisque vehicula
+fermentum ex. Aenean semper pellentesque dapibus. 
